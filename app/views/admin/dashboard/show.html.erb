@@ -1,2 +1,43 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<header class="page-header">
+  <div class="intro">
+    <h4>
+      Take a look at some site metrics below!      
+    </h4>
+  </div>
+</header>
+<div class="panel panel-default items">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Number of Products
+        </td>
+        <td>
+          <%= @product_count %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Number of Categories
+        </td>
+        <td>
+          <%= @category_count %>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+<div class="order-summary jumbotron">
+    <h4>Checkout the inventory!</h4>
+  </div>
+  <%= link_to "See Admin Products", admin_products_path, class: 'btn btn-lg btn-primary' %>
