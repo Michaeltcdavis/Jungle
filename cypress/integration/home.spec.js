@@ -1,6 +1,7 @@
 describe('Home Page', () => {
   beforeEach(() => {
     cy.visit("/");
+    cy.contains(".products article")
   });
 
   it("should show products on the page", () => {
